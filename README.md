@@ -1,5 +1,5 @@
-c-cleanup-attribute-playground
-==============================
+c-destructor-using-cleanup-attribute-playground
+===============================================
 ### Tutorials
 - [Snaipe/libcsptr: Smart pointers for the (GNU) C programming language](https://github.com/Snaipe/libcsptr)
 - [c - A good and idiomatic way to use GCC and clang __attribute__((cleanup)) and pointer declarations - Stack Overflow](https://stackoverflow.com/questions/34574933/a-good-and-idiomatic-way-to-use-gcc-and-clang-attribute-cleanup-and-point)
