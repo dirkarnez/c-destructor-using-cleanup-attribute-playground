@@ -11,6 +11,9 @@ void* log_malloc(size_t size) {
     return ptr;
 }
 
+// double pointer means: the address of the address 
+// int => int*: address of the integer value
+// int* =? int**: address of the variable which stores the address
 void log_free(char** ptr) {
     free(*ptr);
     printf("Freed %p\n", *ptr);
