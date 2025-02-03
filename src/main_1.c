@@ -18,8 +18,18 @@ void log_free(char** ptr) {
 
 int test() {
     DEFER(char*, a, log_malloc(10), log_free);
-    DEFER(char*, b, log_malloc(20), log_free);
-    DEFER(char*, c, log_malloc(30), log_free);
+
+    /*
+
+    __cleanup__ is just a compiler-trick to inject finalizer code, 
+    the above and the below generate identical assembly code:
+    
+    char* c = log_malloc(10);
+    log_free(&c);
+    */
+
+    // DEFER(char*, b, log_malloc(20), log_free);
+    // DEFER(char*, c, log_malloc(30), log_free);
     return 0;
 }
 
